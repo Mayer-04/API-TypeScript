@@ -4,6 +4,7 @@
   "description": "API-REST con funcionabilidad CRUD de usuarios",
   "main": "app.ts",
   "scripts": {
+    "start": "node ./src/app.ts",
     "dev": "nodemon"
   },
   "keywords": [],
