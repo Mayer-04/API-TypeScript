@@ -1,5 +1,6 @@
 import express from "express";
 import cors from "cors";
+import compression from "compression";
 import "dotenv/config";
 import morgan from "morgan";
 import userRouter from "./routes/user.routes";
@@ -9,6 +10,7 @@ const app = express();
 const PORT = process.env.PORT ?? 5001;
 
 app.use(express.json());
+app.use(compression());
 app.use(cors());
 app.use(morgan("dev"));
 
