@@ -10,6 +10,8 @@ const app = express();
 const PORT = process.env.PORT ?? 5001;
 
 app.use(express.json());
+// ! Seguridad
+app.disable("x-powered-by");
 app.use(compression());
 app.use(cors());
 app.use(morgan("dev"));
