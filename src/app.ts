@@ -1,9 +1,7 @@
 import express from "express";
 import cors from "cors";
-import compression from "compression";
 import "dotenv/config";
-import helmet from "helmet";
-import morgan from "morgan";
+import { compression, helmet, morgan } from "./plugins/index";
 import userRouter from "./routes/user.routes";
 import connectDB from "./config/database";
 
