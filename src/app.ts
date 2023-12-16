@@ -1,12 +1,11 @@
 import express from "express";
 import cors from "cors";
-import "dotenv/config";
-import { compression, helmet, morgan } from "./plugins/index";
+import { compression, helmet, morgan, envs } from "./config/plugins";
 import userRouter from "./routes/user.routes";
 import connectDB from "./config/database";
 
 const app = express();
-const PORT = process.env.PORT ?? 5001;
+const PORT = envs.PORT ?? 5001;
 
 // ! Seguridad
 app.disable("x-powered-by");
